@@ -18,4 +18,4 @@ This project focuses on exploring and analyzing a dataset from a store to predic
 `nlp_bert.ipynb`
 I finetune a BERT model to classify the sentiment of employee reviews of Google and Amazon (as positive/negative). I preprocess the data by storing each review as an element in a list and assigning positive (0) and negative (1) labels to it. 
 
-The data is downsampled and split into training and testing sets (80-20 split). The BERT tokenizer (BertTokenizerFast) is used to tokenize the sentences with truncation and padding. I then use a confusion matrix to evaluate the model's performance on the test set. The top 5 and bottom 5 sentences are identified based on SHAP scores, and the SHAP values for each selected sentence are visualized using plots. 
+I train the model on the entire dataset and evaluate the performance based on values from the confusion matrix. I then use the model predictions to extract the 5 best and 5 worst reviews and visualize them using shap text plots. Since shap values take too long to calculate, I downsampled the data and see how the model performs on a subset of the test set. 
